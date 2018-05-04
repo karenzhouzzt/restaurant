@@ -1,6 +1,6 @@
-from django.urls improt path
+from django.urls import path
 
-from .improt views
+from .import views
 app_name = 'waimai'
 urlpatterns = [
     path("",views.home_page, name='home_page'),

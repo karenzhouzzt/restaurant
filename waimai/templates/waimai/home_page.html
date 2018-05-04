@@ -1,0 +1,40 @@
+1 <!DOCTYPE html>
+32. <html>
+33. <head>
+34. 	<title>hszzt waimai</title>
+35. </head>
+36. <body>
+37. 	<h1>hszzt restaurant</h1>
+38. 	<p>Your convenience is our duty and our food is fresh</p>
+39. 
+40. 	<h2>Here are all our orders!</h2>
+41. 
+42. 	<!-- Item 1 -->
+43. 	<p>cola: 10RMB</p>
+44. 	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526012232&di=a122a2f38c55133702d2823bd2a2157d&imgtype=jpg&er=1&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fd01373f082025aafc8693156f1edab64024f1ad7.jpg">    1   
+45. 	<br>
+46. 
+47. 	<!-- Item 2 -->
+48. 	<p>steak: 128RMB</p>
+49. 	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525417417530&di=9a61780faa0056ef649e18ecf132c3ea&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dpixel_huitu%252C0%252C0%252C294%252C40%2Fsign%3D701160dd9a2397ddc274904430fad7db%2Fe61190ef76c6a7efdb32f11cf6faaf51f3de66f7.jpg">
+50. 
+51. 	<!-- Item 3 -->
+52. 	<p>French fries: 10RMB</p>
+53. 	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525417204302&di=301bb2673ed08915e96011106181cec9&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dpixel_huitu%252C0%252C0%252C294%252C40%2Fsign%3D075ad91c66224f4a43947b53608ff53e%2Fc8ea15ce36d3d53903a1a0f93187e950352ab068.jpg"> 
+54. 
+55. 	<!-- Order Form -->
+56. 	<h2>Place your Order</h2>
+57. 	<form action="{% url 'waimai:home_page' %}" method=“POST">     2   
+58. 		{% csrf_token %}    3   
+59. 		<input type="text" name="item" placeholder="Please Type Which Item You Want"><br>     4   
+60. 		<textarea name="address" placeholder="Please Type Your Address”></textarea><br>    5   
+61. 		<input type="submit" value="Place Your Order”>
+62. 	</form>
+63. 
+64. 	<!-- Show Order -->
+65. 	<h1>Your Order:</h1>
+66. 	<p>Item Ordered: {{item}}</p>
+67. 	<p>Delivery Address: {{address}}</p>
+68. 
+69. </body>
+70. </html>
